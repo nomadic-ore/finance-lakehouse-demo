@@ -1,10 +1,30 @@
-
+# Virtual environment
 .venv/
+
+# dbt artifacts
 target/
 dbt_packages/
 logs/
 .dbt
 profiles.yml
+
+# Python artifacts
 __pycache__/
 *.pyc
 
+# Environment files
+.env
+.envrc
+
+# IDE settings
+.vscode/
+.idea/
+
+# Local DBs or notebook junk
+*.db
+.ipynb_checkpoints/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+bs.db
