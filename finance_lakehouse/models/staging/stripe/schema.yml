@@ -1,0 +1,28 @@
+# models/staging/stripe/schema.yml
+version: 2
+
+sources:
+  - name: stripe
+    schema: bronze
+    tables:
+      - name: stripe_subscriptions
+      - name: stripe_customers
+      - name: stripe_charges
+
+models:
+  - name: stg_subscriptions
+    columns:
+      - name: subscription_id
+        tests: [not_null, unique]
+
+  - name: stg_customers
+    columns:
+      - name: customer_id
+        tests: [not_null, unique]
+
+  - name: stg_charges
+    columns:
+      - name: charge_id
+        tests: [not_null, unique]
+      - name: subscription_id
+        tests: [not_null]

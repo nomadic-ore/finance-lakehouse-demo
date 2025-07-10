@@ -1,0 +1,168 @@
+[0m13:45:57.423210 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D409A89F60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D40AD365F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D40B4553F0>]}
+
+
+============================== 13:45:57.439178 | 8add5537-5159-4b9c-ae8b-bdc0a0c2cf9b ==============================
+[0m13:45:57.439178 [info ] [MainThread]: Running with dbt=1.10.3
+[0m13:45:57.441814 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\ndied\\.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt init finance_lakehouse', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:45:57.715681 [debug] [MainThread]: Starter project path: C:\Users\ndied\Documents\Projects\finance-lakehouse-demo\.venv\lib\site-packages\dbt\include\starter_project
+[0m13:45:57.750189 [info ] [MainThread]: 
+Your new dbt project "finance_lakehouse" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:45:57.752636 [info ] [MainThread]: Setting up your profile.
+[0m13:46:34.207688 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m13:46:34.207688 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m13:46:34.208685 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m14:06:49.698726 [error] [MainThread]: Encountered an error:
+
+[0m14:06:49.702160 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\ndied\Documents\Projects\finance-lakehouse-demo\.venv\lib\site-packages\dbt\cli\requires.py", line 161, in wrapper
+    result, success = func(*args, **kwargs)
+  File "C:\Users\ndied\Documents\Projects\finance-lakehouse-demo\.venv\lib\site-packages\dbt\cli\requires.py", line 111, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\ndied\Documents\Projects\finance-lakehouse-demo\.venv\lib\site-packages\dbt\cli\main.py", line 483, in init
+    results = task.run()
+  File "C:\Users\ndied\Documents\Projects\finance-lakehouse-demo\.venv\lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "C:\Users\ndied\Documents\Projects\finance-lakehouse-demo\.venv\lib\site-packages\dbt\task\init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "C:\Users\ndied\Documents\Projects\finance-lakehouse-demo\.venv\lib\site-packages\dbt\task\init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "C:\Users\ndied\Documents\Projects\finance-lakehouse-demo\.venv\lib\site-packages\dbt\task\init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "C:\Users\ndied\Documents\Projects\finance-lakehouse-demo\.venv\lib\site-packages\dbt\task\init.py", line 113, in generate_target_from_input
+    numeric_choice = click.prompt(prompt_msg, type=click.INT)
+  File "C:\Users\ndied\Documents\Projects\finance-lakehouse-demo\.venv\lib\site-packages\click\termui.py", line 168, in prompt
+    value = prompt_func(prompt)
+  File "C:\Users\ndied\Documents\Projects\finance-lakehouse-demo\.venv\lib\site-packages\click\termui.py", line 151, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m14:06:49.706194 [debug] [MainThread]: Command `dbt init` failed at 14:06:49.706194 after 1252.59 seconds
+[0m14:06:49.707198 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D409A89F60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D41E954FA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D41E954850>]}
+[0m14:06:49.708204 [debug] [MainThread]: Flushing usage events
+[0m14:06:50.159963 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:16:41.195433 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011D3FB19EA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011D40CEBAF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011D40CEBA30>]}
+
+
+============================== 14:16:41.199425 | 9a36438e-c2c6-4f8a-b1f9-733fec330ef3 ==============================
+[0m14:16:41.199425 [info ] [MainThread]: Running with dbt=1.10.3
+[0m14:16:41.200072 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ndied\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:16:41.232164 [info ] [MainThread]: dbt version: 1.10.3
+[0m14:16:41.233653 [info ] [MainThread]: python version: 3.10.11
+[0m14:16:41.234020 [info ] [MainThread]: python path: C:\Users\ndied\Documents\Projects\finance-lakehouse-demo\.venv\Scripts\python.exe
+[0m14:16:41.235060 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m14:16:41.239192 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.duckdb'
+[0m14:16:41.254903 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'DATABRICKS_TOKEN'
+[0m14:16:41.256350 [debug] [MainThread]: Command `dbt debug` failed at 14:16:41.254903 after 0.20 seconds
+[0m14:16:41.257658 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011D3FB19EA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011D40D51240>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011D40D27AF0>]}
+[0m14:16:41.258943 [debug] [MainThread]: Flushing usage events
+[0m14:16:41.696285 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:26:00.073806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E62DD65F00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E62FF44820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E62FF47280>]}
+
+
+============================== 14:26:00.078997 | 803f6301-6223-44f2-9bf3-72d6f3172707 ==============================
+[0m14:26:00.078997 [info ] [MainThread]: Running with dbt=1.10.3
+[0m14:26:00.081419 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ndied\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:26:00.104508 [info ] [MainThread]: dbt version: 1.10.3
+[0m14:26:00.105735 [info ] [MainThread]: python version: 3.10.11
+[0m14:26:00.106741 [info ] [MainThread]: python path: C:\Users\ndied\Documents\Projects\finance-lakehouse-demo\.venv\Scripts\python.exe
+[0m14:26:00.107745 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m14:26:00.113574 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'DATABRICKS_TOKEN'
+[0m14:26:00.114959 [debug] [MainThread]: Command `dbt debug` failed at 14:26:00.114959 after 0.24 seconds
+[0m14:26:00.114959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E62DD65F00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E62FFC3EB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E62FFC23E0>]}
+[0m14:26:00.116034 [debug] [MainThread]: Flushing usage events
+[0m14:26:00.507205 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:29:55.510657 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A30FB19F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A310D5F7C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A310D5C850>]}
+
+
+============================== 14:29:55.514889 | 07ee9a98-0c16-4ee7-856f-5f4548007bc5 ==============================
+[0m14:29:55.514889 [info ] [MainThread]: Running with dbt=1.10.3
+[0m14:29:55.514889 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ndied\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:29:55.536004 [info ] [MainThread]: dbt version: 1.10.3
+[0m14:29:55.536004 [info ] [MainThread]: python version: 3.10.11
+[0m14:29:55.537085 [info ] [MainThread]: python path: C:\Users\ndied\Documents\Projects\finance-lakehouse-demo\.venv\Scripts\python.exe
+[0m14:29:55.538099 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m14:29:55.544558 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'DATABRICKS_TOKEN'
+[0m14:29:55.546604 [debug] [MainThread]: Command `dbt debug` failed at 14:29:55.545604 after 0.17 seconds
+[0m14:29:55.546604 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A30FB19F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A310DA3C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A310DA2CB0>]}
+[0m14:29:55.547600 [debug] [MainThread]: Flushing usage events
+[0m14:29:55.978441 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:18:05.462156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000136784C5F00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000136796D3520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000136796D18D0>]}
+
+
+============================== 15:18:05.466147 | 1d429ade-8b04-4e0d-bb72-8e72f7628b89 ==============================
+[0m15:18:05.466147 [info ] [MainThread]: Running with dbt=1.10.3
+[0m15:18:05.466704 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\ndied\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt docs serve', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:18:05.467794 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\ndied\Documents\Projects\finance-lakehouse-demo\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:18:05.467794 [debug] [MainThread]: Command `dbt docs serve` failed at 15:18:05.467794 after 0.15 seconds
+[0m15:18:05.469321 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000136784C5F00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013679697AF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000136796D18D0>]}
+[0m15:18:05.470359 [debug] [MainThread]: Flushing usage events
+[0m15:18:05.906357 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:31:24.556025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027D5523DF30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027D57417040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027D57417760>]}
+
+
+============================== 15:31:24.560226 | aacea21c-3a64-4b4f-b2ca-9b7008a1d70d ==============================
+[0m15:31:24.560226 [info ] [MainThread]: Running with dbt=1.10.3
+[0m15:31:24.560580 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\ndied\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'invocation_command': 'dbt docs generate', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:31:24.561580 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\ndied\Documents\Projects\finance-lakehouse-demo\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:31:24.562145 [debug] [MainThread]: Command `dbt docs generate` failed at 15:31:24.562145 after 0.15 seconds
+[0m15:31:24.563145 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027D5523DF30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027D57416BC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027D57417040>]}
+[0m15:31:24.564142 [debug] [MainThread]: Flushing usage events
+[0m15:31:24.998375 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:31:34.277700 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002202DB3DF30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002202ED7F010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002202ED7D3F0>]}
+
+
+============================== 15:31:34.282142 | c775c259-ef6b-4239-ba11-46e9e71dedcf ==============================
+[0m15:31:34.282142 [info ] [MainThread]: Running with dbt=1.10.3
+[0m15:31:34.283674 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ndied\\.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt docs serve', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:31:34.283674 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\ndied\Documents\Projects\finance-lakehouse-demo\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:31:34.284716 [debug] [MainThread]: Command `dbt docs serve` failed at 15:31:34.284716 after 0.15 seconds
+[0m15:31:34.285889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002202DB3DF30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002202ED0B6D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002202ED7D3F0>]}
+[0m15:31:34.286934 [debug] [MainThread]: Flushing usage events
+[0m15:31:34.635259 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:33:57.304575 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC90C55EA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC91E63E20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC91E622C0>]}
+
+
+============================== 15:33:57.308566 | 72a27ec7-d35c-42a3-99f9-2aff4a607b47 ==============================
+[0m15:33:57.308566 [info ] [MainThread]: Running with dbt=1.10.3
+[0m15:33:57.309202 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\ndied\\.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt docs serve', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:33:57.310201 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\ndied\Documents\Projects\finance-lakehouse-demo\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:33:57.310890 [debug] [MainThread]: Command `dbt docs serve` failed at 15:33:57.310890 after 0.15 seconds
+[0m15:33:57.311889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC90C55EA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC91654970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC91E622C0>]}
+[0m15:33:57.312886 [debug] [MainThread]: Flushing usage events
+[0m15:33:57.707943 [debug] [MainThread]: An error was encountered while trying to flush usage events

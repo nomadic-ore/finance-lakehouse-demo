@@ -1,0 +1,11 @@
+subscription_id,customer_id,price_id,quantity,status,created
+sub_1001,cus_101,price_monthly,1,active,2024-01-10T13:45:12Z
+sub_1002,cus_102,price_monthly,1,active,2024-01-11T09:18:42Z
+sub_1003,cus_103,price_monthly,1,active,2024-01-12T22:05:07Z
+sub_1004,cus_104,price_monthly,1,canceled,2024-01-13T08:15:55Z
+sub_1005,cus_105,price_annual,1,active,2024-02-01T14:20:33Z
+sub_1006,cus_106,price_annual,1,active,2024-02-03T17:11:21Z
+sub_1007,cus_107,price_annual,1,active,2024-02-05T11:49:02Z
+sub_1008,cus_108,price_monthly,1,past_due,2024-02-07T19:25:40Z
+sub_1009,cus_109,price_monthly,1,active,2024-02-09T06:42:18Z
+sub_1010,cus_110,price_monthly,1,canceled,2024-02-10T21:30:00Z

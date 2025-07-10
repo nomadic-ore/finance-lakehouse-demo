@@ -1,0 +1,6 @@
+charge_id,subscription_id,amount_usd,currency,status,created
+ch_2001,sub_1001,1000,usd,succeeded,2024-01-10T13:45:12Z
+ch_2002,sub_1002,1000,usd,succeeded,2024-01-11T09:18:42Z
+ch_2003,sub_1003,1000,usd,failed,2024-01-12T22:05:07Z
+ch_2004,sub_1004,1000,usd,refunded,2024-01-13T08:15:55Z
+ch_2005,sub_1005,12000,usd,succeeded,2024-02-01T14:20:33Z
