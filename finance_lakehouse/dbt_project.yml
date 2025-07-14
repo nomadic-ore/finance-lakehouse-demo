@@ -33,6 +33,8 @@ models:
   finance_lakehouse:
     staging:
       +materialized: view
+    silver:
+      +materialized: view
 
 flags:
   use_materialization_v2: true

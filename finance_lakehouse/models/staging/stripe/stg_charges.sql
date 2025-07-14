@@ -3,8 +3,8 @@
 SELECT
     charge_id,
     subscription_id,
-    amount_usd / 100 as amount,
+    amount_usd / 100 AS amount,
     currency,
     status,
-    cast(created as timestamp) as created_at
+    CAST(created AS timestamp) AS created_at
 FROM {{ source('stripe', 'stripe_charges') }}

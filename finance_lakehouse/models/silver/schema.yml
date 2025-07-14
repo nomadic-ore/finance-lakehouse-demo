@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dim_customers
+    columns:
+      - name: customer_id
+        tests: [not_null, unique]
+      - name: email
+        tests: [not_null]
+      - name: country
+        tests: [not_null]
+
+  - name: dim_subscriptions
+    columns:
+      - name: subscription_id
+        tests: [not_null, unique]
+      - name: customer_id
+        tests: [not_null]
+
+  - name: fct_charges
+    columns:
+      - name: charge_id
+        tests: [not_null, unique]
+      - name: amount
+        tests: [not_null]
+

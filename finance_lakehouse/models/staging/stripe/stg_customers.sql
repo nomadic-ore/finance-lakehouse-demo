@@ -1,8 +1,8 @@
 {{ config(materialized='view') }}
 
-select
+SELECT
     customer_id,
     email,
     country,
-    cast(created as timestamp) as created_at
-from {{ source('stripe', 'stripe_customers') }}
+    CAST(created AS timestamp) AS created_at
+FROM {{ source('stripe', 'stripe_customers') }}

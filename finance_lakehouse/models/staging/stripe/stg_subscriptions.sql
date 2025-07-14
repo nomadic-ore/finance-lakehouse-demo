@@ -1,10 +1,10 @@
 {{ config(materialized='view') }}
 
-select
+SELECT
     subscription_id,
     customer_id,
     price_id,
-    quantity::int      as quantity,
+    quantity::int      AS quantity,
     status,
-    cast(created as timestamp) as created_at
-from {{ source('stripe', 'stripe_subscriptions') }}
+    CAST(created AS timestamp) AS created_at
+FROM {{ source('stripe', 'stripe_subscriptions') }}
