@@ -32,9 +32,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   finance_lakehouse:
     staging:
-      +materialized: view
+      +materialized: table
     silver:
-      +materialized: view
+      +materialized: table
 
 flags:
   use_materialization_v2: true

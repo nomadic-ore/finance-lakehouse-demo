@@ -1,4 +1,4 @@
-{{  config(materialzed='view') }}
+{{  config(materialzed='table') }}
 
 SELECT
     charge_id,

@@ -2,25 +2,42 @@ version: 2
 
 models:
   - name: dim_customers
+    description: "Customer dimension table including email and country details."
     columns:
       - name: customer_id
+        description: "Primary key for the customer."
         tests: [not_null, unique]
+
       - name: email
+        description: "Email address of the customer."
         tests: [not_null]
+
       - name: country
+        description: "Country where the customer is located."
         tests: [not_null]
 
   - name: dim_subscriptions
+    description: "Subscription dimension table with customer relationships."
     columns:
       - name: subscription_id
+        description: "Primary key for the subscription."
         tests: [not_null, unique]
+
       - name: customer_id
+        description: "Foreign key referencing the customer who owns this subscription."
         tests: [not_null]
 
   - name: fct_charges
+    description: "Fact table containing individual charge records."
     columns:
       - name: charge_id
+        description: "Primary key for the charge event."
         tests: [not_null, unique]
+
       - name: amount
+        description: "Amount of the charge in cents."
         tests: [not_null]
 
+      - name: subscription_id
+        description: "Foreign key referencing the subscription where the charges were incurred."
+        tests: [ not_null ]
