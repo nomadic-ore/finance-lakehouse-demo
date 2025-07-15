@@ -6,32 +6,50 @@ sources:
     schema: bronze
     tables:
       - name: stripe_subscriptions
+        description: Raw subscription data from the Stripe source system.
+        config:
+          freshness:
+            warn_after: {count: 24, period: hour}
+            error_after: {count: 48, period: hour}
+          loaded_at_field: created
+
       - name: stripe_customers
+        description: Raw customer data from the Stripe source system.
+        config:
+          freshness:
+            warn_after: {count: 24, period: hour}
+            error_after: {count: 48, period: hour}
+          loaded_at_field: created
+
       - name: stripe_charges
+        description: Raw charges data from the Stripe source system.
+        config:
+          freshness:
+            warn_after: {count: 24, period: hour}
+            error_after: {count: 48, period: hour}
+          loaded_at_field: created
 
 models:
   - name: stg_subscriptions
-    freshness:
-      error_after: { count: 12, period: hour }
-    loaded_at_field: created_at
+    description: Cleaned subscription data with proper types and structure.
     columns:
       - name: subscription_id
+        description: Unique identifier for each subscription
         tests: [not_null, unique]
 
   - name: stg_customers
-    freshness:
-      error_after: { count: 12, period: hour }
-    loaded_at_field: created_at
+    description: Cleaned customer data from the Stripe source
     columns:
       - name: customer_id
+        description: Unique identifier for each customer
         tests: [not_null, unique]
 
   - name: stg_charges
-    freshness:
-      error_after: { count: 12, period: hour }
-    loaded_at_field: created_at
+    description: Cleaned charge-level data including amounts and relationships
     columns:
       - name: charge_id
+        description: Unique identifier for each charge
         tests: [not_null, unique]
       - name: subscription_id
+        description: Foreign key to the subscriptions table
         tests: [not_null]
